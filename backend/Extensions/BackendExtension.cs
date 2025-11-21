@@ -39,8 +39,8 @@ namespace MyApp.Backend.Extension
             services.AddCors(options => ConfigureCors(options));
 
             // Adatbázis választás
-            ConfigureInMemoryDb(services); // <- Alapértelmezett
-            //ConfigureSqliteDb(services);
+            //ConfigureInMemoryDb(services); // <- Alapértelmezett
+            ConfigureSqliteDb(services);
             //ConfigureMysqlDb(services);
 
             return services;

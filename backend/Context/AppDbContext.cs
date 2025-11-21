@@ -1,4 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using MyApp.Backend.Models;
+
 
 namespace MyApp.Backend.Context
 {
@@ -28,6 +30,8 @@ namespace MyApp.Backend.Context
     /// </example>
     public class AppDbContext : DbContext
     {
+        public DbSet<Users> User {  get; set; }
+        public DbSet<Notes> Note {  get; set; }
         public AppDbContext(DbContextOptions options) : base(options)
         {
         }
